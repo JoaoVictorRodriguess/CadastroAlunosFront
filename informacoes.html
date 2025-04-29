@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/informacoes.css">
+	<title>Informações</title>
+</head>
+<body>
+	<header>
+		<div class="cabecalho">
+			<div class="logo">
+				<img src="imagens/logo.png">
+			</div><!--logo-->
+			<div class="menu">
+				<a href="inicial.html">Inicial</a>
+				<a href="cadastro.html">Cadastro</a>
+				<a href="consulta.html">Consulta</a>
+				<a href="informacoes.html">Fale Conosco</a>
+			</div><!--menu-->
+		</div><!--cabeçalho-->
+		<div class="Banner"></div> <!--Banner-->
+	</header><!--Header-->
+	<section>
+		<div class="Dados">
+			<div class="titulo1">
+				<span>Fale Conosco</span>
+			</div>	
+			<div class="faleconosco">
+					<div class="telefones">
+						<label for="telefonesuteis">Telefones Úteis</label>
+						<p>Estamos prontos para atender você!
+							Se tiver dúvidas, sugestões ou quiser saber mais sobre nossos serviços, entre em contato conosco.
+							Nossa equipe está disponível para oferecer todo o suporte que você precisa.<br>
+							
+							📞 Telefones para contato:<br>
+							(XX) XXXX-XXXX | (XX) XXXXX-XXXX<br>
+							
+							Você também pode nos enviar uma mensagem pelo formulário abaixo. Responderemos o mais rápido possível!<br>
+							
+							Estamos aguardando seu contato!</p>
+						
+						<label for="local">Localização</label>
+						<p> Rua: Duque de Caxias, Nº 20 - Centro - Iracemápolis - SP<br>
+							CEP: 13495-000
+						</p>
+						<label for="socialmedia">Siga-nos</label>
+						<img src="imagens/facebook.png">
+						<img src="imagens/instagram.png">
+						<img src="imagens/twitter.png">
+					</div><!--telefones-->
+				<form>
+					<label for="titulo">Se preferir nos mande um email</label>
+					<div class="filtros">
+						<input type="text" id="name" value="" required placeholder="Nome">
+						<input type="text" id="email" value="" required placeholder="Email">
+						<input type="text" id="telefone" value="" required placeholder="Telefone">
+						<div class="selects">
+							<select name="tipo" id="tipo">
+								<option disabled selected>Escolha o Assunto</option>
+								<option>Alunos</option>
+								<option>Professores</option>
+								<option>Opcao1</option>
+								<option>Opcao2</option>
+								<option>Opcao3</option>
+							</select>
+						</div><!--selects-->
+						<textarea placeholder="Escreva sua mensagem"></textarea>
+					</div><!--filtros-->
+					<div class="submit">
+						<input type="submit" name="acao" value="Enviar">
+					</div><!--submit-->
+				</form><!--form-->
+			</div><!--faleconosco-->
+		</div><!--dados-->
+	</section>
+</body>
+</html>

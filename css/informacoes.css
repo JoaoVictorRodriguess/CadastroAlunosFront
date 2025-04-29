@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "OpenSans";
+}
+
+html,body{
+	height: 100%;
+}
+@font-face{
+	src: url('../fonts/OpenSans-VariableFont_wdth,wght.ttf');
+	font-family: "OpenSans";
+}
+.cabecalho{
+	height: 70px;
+	width: 100%;
+	background-color: rgb(21,101,191);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+.menu{
+	text-align: center;
+	margin-top: 20px;
+}
+.menu a{
+	padding: 1%;
+	font-size: 18px;
+	text-decoration: none;
+	color: rgb(240,240,240);
+}
+
+.Banner{
+	background-color: rgb(3,168,243);
+	height: 200px;
+	z-index: 1;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.Dados{
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	left: 50%;
+	top: 120px;
+	transform: translateX(-50%);
+	z-index: 2;
+	width: 95%;
+	height: 200%;
+	border-radius: 5px;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.titulo1{
+	display: flex;
+  	align-items: center;
+  	text-align: center;
+ 	margin: 2% 0;
+	font-size: 25px;
+	color: rgb(64,64,64);
+}
+
+.titulo1::before,
+.titulo1::after{
+  content: "";
+  flex: 1;
+  border-bottom: 1.7px solid rgb(64,64,64);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.titulo1::before{
+  margin-right: 10px;
+}
+
+.titulo1::after{
+  margin-left: 10px;
+}
+
+.faleconosco{
+	display: flex;
+	flex-direction: row; /*lado a lado*/
+	justify-content: space-between;
+	margin-left: 5%;
+	width: 90%;
+	margin-top: 2%;
+}
+.telefones{
+	width: 98%;
+}
+.telefones label{
+	margin-top: 5%;
+	margin-bottom: 3%;
+	display: flex;
+  	align-items: center;
+  	text-align: center;
+	font-size: 25px;
+	color: rgb(64,64,64);
+}
+
+.telefones p{
+	display: flex;
+	align-items: center;
+  	text-align: left;
+ 	margin: 2% 0;
+	color: rgb(64,64,64);
+	margin-bottom: 5%;
+	width: 100%;
+	line-height: 1.9;
+}
+
+.telefones img{
+	width: 40px;
+	height: 40px;
+}
+form{
+	background-color: rgb(240,240,240);
+}
+
+form label{
+	margin-top: 5%;
+	margin-bottom: 3%;
+	display: flex;
+  	align-items: center;
+  	text-align: center;
+	font-size: 25px;
+	color: rgb(64,64,64);
+	margin-left: 10%;
+
+}
+
+.filtros{
+	width: 100%;
+	margin-left: 10%;
+}
+.filtros input[type=text]{
+	height: 25px;
+	width: 400px;
+	margin-bottom: 2%;
+}
+
+.selects select{
+	width: 405px;
+	height: 29px;
+	margin-bottom: 2%;
+}
+
+textarea{
+	width: 388px;
+	height: 100px;
+	padding: 5px 8px;
+	resize: none;
+}
+
+.submit input[type=submit]{
+	margin-top: 3%;
+	margin-left: 10%;
+	position: relative;
+	width: 100px;	
+	height: 35px;
+	cursor: pointer;	
+	font-size: 16px;
+	color: rgb(64,64,64);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}

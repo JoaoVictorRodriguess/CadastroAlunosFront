@@ -1,0 +1,7 @@
+Colors use in this project:
+	color: rgb(3,168,243);
+	color: rgb(21,101,191);
+	color: rgb(240,240,240);
+	color: rgb(204, 204, 204);
+    color: rgb(64,64,64);
+    colorBorder: rgba(0, 0, 0, 0.5);
