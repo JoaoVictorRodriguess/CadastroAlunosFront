@@ -1,4 +1,4 @@
-<h1>School Platform - FrontEnd</h1>
+<h1>Plataforma Escolar - FrontEnd</h1>
 
 <h2>Project Overview</h2>
 
