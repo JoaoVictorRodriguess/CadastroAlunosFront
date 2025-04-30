@@ -1,5 +1,3 @@
-# StudentRegistrationFront
-
 <h1>School Platform - FrontEnd</h1>
 
 <h2>Project Overview</h2>
@@ -45,10 +43,8 @@
 <h2>Future Plans</h2>
     <h3>1. User Login System</h3>
     <ul><p>Each user will have their own access to the platform.</p></ul>
-    
     <h3>2. Staff Registration</h3>
     <ul><p>In addition to students, it will be possible to register teachers and other staff members.</p></ul>
-    
     <h3>3. Student Photos</h3>
     <ul><p>Student profiles will include a photo for better identification.</p></ul>
 
