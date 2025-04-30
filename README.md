@@ -48,6 +48,8 @@
     <h3>3. Student Photos</h3>
     <ul><p>Student profiles will include a photo for better identification.</p></ul>
 
+<h2>Live Demo</h2>
+Check out the live demo of the project <a href="https://plataformaescolarfront.netlify.app/">school plataform(URL of the live demo).</a>
 
 <h2>Contributing</h2>
 <p>Contributions are welcome! If you have suggestions, improvements, or find any bugs, feel free to fork the repository, create a branch, and open a pull request. Any help is appreciated to improve this project.</p>
