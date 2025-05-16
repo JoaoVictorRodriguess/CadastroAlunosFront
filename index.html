@@ -3,97 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="inicial/css/inicial.css">
-	<title>Pagina Inicial</title>
+	<link rel="stylesheet" type="text/css" href="login/login/css/login.css">
+	<title>Cadastro de Alunos</title>
 </head>
 <body>
-	<header>
-		<div class="cabecalho">
-			<div class="logo">
-				<img src="imagens/logo.png">
-			</div><!--logo-->
-			<div class="menu">
-				<a href="index.html">Inicial</a>
-				<a href="cadastro/cadastro.html">Cadastro</a>
-				<a href="consulta/consulta.html">Consulta</a>
-				<a href="fale-conosco/fale-conosco.html">Fale Conosco</a>
-			</div><!--menu-->
-		</div><!--cabeçalho-->
+	<header>	
 		<div class="Banner"></div> <!--Banner-->
 	</header><!--Header-->
 	<section>
 		<div class="Dados">
-			<div class="cards">
-				<div class="card1">
-					<div class="card-conteudo">
-						<span class="contador">250</span>
-						<span class="descricao">Total De Alunos</span>
-					</div><!--card1-->
-				</div><!--card-conteudo-->
-				<div class="card2">
-					<div class="card-conteudo">
-						<span class="contador">5</span>
-						<span class="descricao">Total De Salas</span>
-					</div><!--card2-->
-				</div><!--card-conteudo-->
-				<div class="card3">
-					<div class="card-conteudo">
-						<span class="contador">11</span>
-						<span class="descricao">Total De Matérias</span>
-					</div><!--card3-->
-				</div><!--card-conteudo-->
-				<div class="card4">
-					<div class="card-conteudo">
-						<span class="contador">8</span>
-						<span class="descricao">Total De Professores</span>
-					</div><!--card4-->
-				</div><!--card-conteudo-->
-			</div><!--cards-->
-			<div class="conteudo-e-atalhos">
-				<div class="conteudo">
-					<h1>Ultimas Notícias</h1>
-					<div class="noticias">
-						<h2>Professores municipais de SP decidem continuar greve</h2><br>
-						<h4>Categoria se opõe a reajuste abaixo da inflação</h4>
-						<img src="inicial/imagens/professores.jpeg"><br>
-						<p>Professores municipais ocuparam nesta terça-feira (22) o Viaduto do Chá, em frente à sede da prefeitura de São Paulo, e realizaram assembleia na qual aprovaram a continuidade da greve da categoria, iniciada no dia 15 de abril.
-						Os profissionais da educação decretaram greve na semana passada, após rejeitarem a proposta do governo municipal de reajuste anual de 2,6%, a partir de 1º de maio de 2025, e de 2,55%, a partir de 1º de maio de 2026.
-						A manifestação teve início no final da manhã, e, depois, os professores se dirigiram à Avenida Paulista, onde permaneceram até as 15h. O ato unificou os sindicatos que representam os cerca de 70 mil profissionais, que reivindicam que o reajuste dos salários não seja inferior à inflação anual acumulada.
-						Além disso, os servidores municipais cobram: A incorporação aos salários dos 44% pagos como abono complementar de pisos salariais para ativos e aposentados da educação;
-						o fim dos 14% de contribuição previdenciária, considerada desproporcional pela categoria;
-						a redução de jornada de trabalho para profissionais de outras categorias da educação, como inspetores e merendeiras; e melhores condições de prevenção à saúde.
-						A prefeitura ingressou na Justiça com ação para a instalação de dissídio coletivo de greve, com pedido de liminar, concedida pelo Tribunal de Justiça de São Paulo (TJ-SP). O juízo determinou o funcionamento das escolas com pelo menos 70% dos profissionais de educação, com pena de multa diária de R$10 mil para cada sindicato envolvido na greve.
-						A categoria deve se mobilizar novamente na quarta-feira (23), quando a proposta salarial da prefeitura tem previsão de avaliação na Câmara dos Vereadores, onde há possibilidade de votação em sessão extraordinária. Nova assembleia foi convocada para quinta-feira, também na sede do legislativo paulistano.</p>
-					</div><!--noticias-->
-				</div><!--conteudo-->
-				<div class="atalhos">
-					<div class="atalho1">
-						<a href="cadastro/cadastro.html">
-							<p>Cadastro de Alunos</p>
-							<img src="inicial/imagens/adicao.png"class="transparente" alt="Adicionar">
-						</a>
-					</div><!--Atalho1-->
-					<div class="atalho2">
-						<a href="cadastro/cadastro.html">
-							<p>Cadastrar Funcionarios</p>
-							<img src="inicial/imagens/adicao.png"alt="Adicionar">
-						</a>
-					</div><!--Atalho2-->
-					<div class="atalho3">
-						<a href="consulta/consulta.html">
-							<p>Consultar Alunos</p>
-							<img src="inicial/imagens/lupa.png" alt="Adicionar">
-						</a>
-					</div><!--Atalho3-->
-					<div class="atalho4">
-						<a href="fale-conosco/fale-conosco.html">
-							<p>Calendario Academico</p>
-							<img src="inicial/imagens/calendario.png" alt="Adicionar">
-						</a>
-					</div><!--Atalho4-->
-				</div><!--atalhos-->
-			</div><!--conteudo-e-atalhos-->
-		</div><!--dados-->
+			<form>
+				<div class="titulo1">
+					<label for="Dados Pessoais">Login</label>
+				</div><!--titulos1-->
+				<div class="firstline">
+					<input type="text" id="email" value="" required placeholder="Email">
+					<input type="password" id="senha" value="" required placeholder="Senha">
+					<a href="login/esqueci-senha/esqueci-senha.html">
+						<p>Esqueci a senha</p>
+					</a>
+					<a href="login/novo-cadastro/novo-cadastro.html">
+						<p>Primeiro Acesso?</p>
+					</a>
+				</div><!--firstline-->
+				<div class="submit">
+					<button onclick="window.location.href='inicial/inicial.html'">Entrar</button>
+				</div><!--submit-->
+			</form>
+		</div><!--Dados-->
 	</section>
 </body>
 </html>

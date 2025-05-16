@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/esqueci-senha.css">
 	<title>Cadastro de Alunos</title>
 </head>
 <body>
@@ -14,20 +14,15 @@
 		<div class="Dados">
 			<form>
 				<div class="titulo1">
-					<label for="Dados Pessoais">Login</label>
+					<label for="Dados Pessoais">Recuperação da conta</label>
 				</div><!--titulos1-->
 				<div class="firstline">
-					<input type="text" id="email" value="" required placeholder="Email">
-					<input type="text" id="senha" value="" required placeholder="Senha">
-					<a href="cadastro.html">
-						<p>Esqueci a senha</p>
-					</a>
-					<a href="cadastroSenha.html">
-						<p>Primeiro Acesso?</p>
-					</a>
+					<input type="text" id="email" value="" required placeholder="Digite o email*">
+					<input type="password" id="senha" value="" required placeholder="Nova senha*">
+					<input type="password" id="senha" value="" required placeholder="Confirme a senha*">
 				</div><!--firstline-->
 				<div class="submit">
-					<input type="submit" name="acao" value="Entrar">
+					<button onclick="window.location.href='../../index.html'">Atualizar senha</button>
 				</div><!--submit-->
 			</form>
 		</div><!--Dados-->
