@@ -7,6 +7,61 @@
 	<title>Consulta de Alunos</title>
 </head>
 <body>
+	<script type="text/javascript">
+		function formatarCPF(valor){
+			valor = valor.replace(/\D/g, '');
+			
+			if(valor.length > 3){
+				valor = valor.substring(0,3) + '.' + valor.substring(3);
+			}
+			if(valor.length > 7){
+				valor = valor.substring(0,7) + '.' + valor.substring(7);
+			}
+			if(valor.length > 11){
+				valor = valor.substring(0,11) + '.' + valor.substring(11,13);
+			}
+
+			return valor
+		}
+
+		function formatarRG(valor){
+			valor = valor.replace(/\D/g, '');
+			
+			if(valor.length > 3){
+				valor = valor.substring(0,2) + '.' + valor.substring(2);
+			}
+			if(valor.length > 6){
+				valor = valor.substring(0,6) + '.' + valor.substring(6);
+			}
+			if(valor.length > 10){
+				valor = valor.substring(0,10) + '.' + valor.substring(10);
+			}
+			if(valor.length > 11){
+				valor = valor.substring(0,10) + '-' + valor.substring(8,9);
+			}
+
+			return valor
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			const turma = document.getElementById('turma');
+			const professor = document.getElementById('professor');
+
+			const professores = {
+	  				'1': 'Magali',
+	  				'2': 'Fabiana',
+	  				'3': 'Edileusa',
+	  				'4': 'Edna',
+	  				'5': 'Adria',
+	 				'6': 'Thiago'
+	 		};
+
+			turma.addEventListener('change', function(){
+				professor.value = professores[turma.value] || "";
+			});
+		});		
+
+	</script>
 	<header>
 		<div class="cabecalho">
 			<div class="logo">
@@ -29,19 +84,19 @@
 				</div><!--titulo1-->
 				<div class="filtros">
 					<input type="text" id="name" value="" required placeholder="Nome">
-					<input type="text" id="cpf" value="" required placeholder="CPF">
-					<input type="text" id="rg" value="" placeholder="RG">
-					<input type="text" id="professor" value="" placeholder="Professor">
+					<input type="text" id="cpf" value="" required oninput="this.value = formatarCPF(this.value)" placeholder="CPF" maxlength="14">
+					<input type="text" id="rg" value="" required oninput="this.value = formatarRG(this.value)" placeholder="RG" maxlength="12">
+					<input type="text" id="professor" value="" placeholder="Professor" readonly>
 				</div><!--filtros-->
 				<div class="selects">
 					<select name="turma" id="turma">
-						<option disabled selected>Turma</option>
-						<option>1º Ano</option>
-						<option>2º Ano</option>
-						<option>3º Ano</option>
-						<option>4º Ano</option>
-						<option>5º Ano</option>
-						<option>6º Ano</option>
+						<option value=""disabled selected>Turma</option>
+						<option value="1">1º Ano</option>
+						<option value="2">2º Ano</option>
+						<option value="3">3º Ano</option>
+						<option value="4">4º Ano</option>
+						<option value="5">5º Ano</option>
+						<option value="6">6º Ano</option>
 					</select><!--turma-->
 					<select name="situacao" id="situacao">
 						<option disabled selected>Situação</option>situação
