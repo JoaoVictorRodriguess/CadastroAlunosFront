@@ -8,25 +8,28 @@
 </head>
 <body>
 	<header>	
-		<div class="Banner"></div> <!--Banner-->
-	</header><!--Header-->
+		<div class="Banner"></div>
+	</header>
+
 	<section>
 		<div class="Dados">
-			<form>
+			<form action="novo-cadastro.php" method="POST">
 				<div class="titulo1">
-					<label for="Dados Pessoais">Crie sua conta</label>
-				</div><!--titulos1-->
+					<label for="dados">Crie sua conta</label>
+				</div>
+
 				<div class="firstline">
-					<input type="text" id="nome" value="" required placeholder="Nome completo*">
-					<input type="text" id="email" value="" required placeholder="Digite o email*">
-					<input type="password" id="senha" value="" required placeholder="Digite a senha*">
-					<input type="password" id="senha" value="" required placeholder="Confirme a senha*">
-				</div><!--firstline-->
+					<input type="text" name="nome" required placeholder="Nome completo*">
+					<input type="email" name="email" required placeholder="Digite o email*">
+					<input type="password" name="senha" required placeholder="Digite a senha*">
+					<input type="password" name="confirma_senha" required placeholder="Confirme a senha*">
+				</div>
+
 				<div class="submit">
-					<button onclick="window.location.href='../../index.html'">Criar conta</button>
-				</div><!--submit-->
+					<button type="submit" name="criar_conta">Criar conta</button>
+				</div>
 			</form>
-		</div><!--Dados-->
+		</div>
 	</section>
 </body>
 </html>

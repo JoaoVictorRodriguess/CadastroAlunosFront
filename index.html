@@ -12,13 +12,13 @@
 	</header><!--Header-->
 	<section>
 		<div class="Dados">
-			<form>
+			<form action="login/login/login.php" method="POST">
 				<div class="titulo1">
 					<label for="Dados Pessoais">Login</label>
 				</div><!--titulos1-->
 				<div class="firstline">
-					<input type="text" id="email" value="" required placeholder="Email">
-					<input type="password" id="senha" value="" required placeholder="Senha">
+					<input type="email" name="email" value="" required placeholder="E-mail">
+					<input type="password" name="senha" value="" required placeholder="Senha">
 					<a href="login/esqueci-senha/esqueci-senha.html">
 						<p>Esqueci a senha</p>
 					</a>
@@ -27,7 +27,7 @@
 					</a>
 				</div><!--firstline-->
 				<div class="submit">
-					<button onclick="window.location.href='inicial/inicial.html'">Entrar</button>
+					<button type="submit" name="login">Entrar</button>
 				</div><!--submit-->
 			</form>
 		</div><!--Dados-->

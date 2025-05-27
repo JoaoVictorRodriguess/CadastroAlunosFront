@@ -4,28 +4,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/esqueci-senha.css">
-	<title>Cadastro de Alunos</title>
+	<title>Recuperação de Conta</title>
 </head>
 <body>
 	<header>	
-		<div class="Banner"></div> <!--Banner-->
-	</header><!--Header-->
+		<div class="Banner"></div>
+	</header>
 	<section>
 		<div class="Dados">
-			<form>
+			<form action="trocar_senha.php" method="POST">
 				<div class="titulo1">
-					<label for="Dados Pessoais">Recuperação da conta</label>
-				</div><!--titulos1-->
+					<label>Recuperação da conta</label>
+				</div>
 				<div class="firstline">
-					<input type="text" id="email" value="" required placeholder="Digite o email*">
-					<input type="password" id="senha" value="" required placeholder="Nova senha*">
-					<input type="password" id="senha" value="" required placeholder="Confirme a senha*">
-				</div><!--firstline-->
+					<input type="email" name="email" required placeholder="Digite o email*">
+					<input type="password" name="nova_senha" required placeholder="Nova senha*">
+					<input type="password" name="confirma_senha" required placeholder="Confirme a senha*">
+				</div>
 				<div class="submit">
-					<button onclick="window.location.href='../../index.html'">Atualizar senha</button>
-				</div><!--submit-->
+					<button type="submit" name="atualizar">Atualizar senha</button>
+				</div>
 			</form>
-		</div><!--Dados-->
+		</div>
 	</section>
 </body>
 </html>
