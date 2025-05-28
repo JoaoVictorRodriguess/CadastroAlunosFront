@@ -2,108 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
 	<title>Cadastro de Alunos</title>
 </head>
 <body>
-	<script type="text/javascript">
-		function formatarCPF(valor){
-			valor = valor.replace(/\D/g, '');
-			
-			if(valor.length > 3){
-				valor = valor.substring(0,3) + '.' + valor.substring(3);
-			}
-			if(valor.length > 7){
-				valor = valor.substring(0,7) + '.' + valor.substring(7);
-			}
-			if(valor.length > 11){
-				valor = valor.substring(0,11) + '.' + valor.substring(11,13);
-			}
-
-			return valor
-		}
-
-		function formatarRG(valor){
-			valor = valor.replace(/\D/g, '');
-			
-			if(valor.length > 3){
-				valor = valor.substring(0,2) + '.' + valor.substring(2);
-			}
-			if(valor.length > 6){
-				valor = valor.substring(0,6) + '.' + valor.substring(6);
-			}
-			if(valor.length > 10){
-				valor = valor.substring(0,10) + '.' + valor.substring(10);
-			}
-			if(valor.length > 11){
-				valor = valor.substring(0,10) + '-' + valor.substring(8,9);
-			}
-
-			return valor
-		}
-
-		function validarSelects(){
-			const genero = document.getElementById('sexo');
-			const situacao = document.getElementById('situacao');
-			const origem = document.getElementById('origem');
-			const estado = document.getElementById('estado');
-			const turma = document.getElementById('turma');
-
-			//genero
-			if(genero.value === ""){
-				alert("Preencha o Genero");
-				return false
-			}
-
-			//situacao
-			if(situacao.value === ""){
-				alert("Preencha a Situação");
-				return false
-			}
-
-			//origem
-			if(origem.value === ""){
-				alert("Preencha a Origem do Contato");
-				return false
-			}
-
-			//estado
-			if(estado.value ===""){
-				alert("Preencha o Estado");
-				return false;
-			}
-
-			//turma
-			if(turma.value ===""){
-				alert("Preencha a Turma");
-				return false;
-			}
-
-			//tudo ok
-			return true;
-
-		}
-
-		document.addEventListener('DOMContentLoaded', function() {
-			const turma = document.getElementById('turma');
-			const professor = document.getElementById('professor');
-
-			const professores = {
-	  				'1': 'Magali',
-	  				'2': 'Fabiana',
-	  				'3': 'Edileusa',
-	  				'4': 'Edna',
-	  				'5': 'Adria',
-	 				'6': 'Thiago'
-	 		};
-
-			turma.addEventListener('change', function(){
-				professor.value = professores[turma.value] || "";
-			});
-		});		
-
-	</script>
 	<header>	
 		<div class="cabecalho">
 			<div class="logo">
@@ -121,15 +24,13 @@
 	<section>
 		<div class="Dados">
 			<form onsubmit="return validarSelects()">
-				<div class="titulo1">
+				<div class="titulo">
 					<label for="Dados Pessoais">Dados Pessoais</label>
-				</div><!--titulos1-->
-				<div class="firstline">
+				</div><!--titulos-->
+				<div class="containerDados">
 					<input type="text" id="nome" value="" required placeholder="Nome">
 					<input type="number" id="codmat" disabled="" placeholder="Código de Matrícula">
 					<input type="date" id="data" value="" required placeholder="Data de Nascimento">
-				</div><!--firstline-->
-				<div class="secondline">
 					<input type="text" id="cpf" value="" required oninput="this.value = formatarCPF(this.value)" placeholder="CPF" maxlength="14">
 					<input type="text" id="rg" value="" required oninput="this.value = formatarRG(this.value)" placeholder="RG" maxlength="12">
 					<select name="sexo" id="sexo">
@@ -148,31 +49,28 @@
 					<label>Manha</label>
 					<input type="radio" name="turno" id="turno" value="">
 					<label>Tarde</label>
-				</div><!--secondline-->
-				<div class="thirdline">
 					<input type="text" id="telefone" value="" required placeholder="Telefone Fixo">
 					<input type="text" id="comercial" value="" placeholder="Telefone Comercial">
 					<input type="text" id="celular" value="" required placeholder="Celular">
 					<select name="origem" id="origem">
 						<option value="" disabled selected>Origem do Contato</option>
-						<option>Pai</option>
-						<option>Mãe</option>
-						<option>Irmão/Irmã</option>
-						<option>Avô/Avó</option>
-						<option>Tio(a)</option>
-						<option>Outros</option>
+						<option value="Pai">Pai</option>
+						<option value="Mae">Mãe</option>
+						<option value="Irmao">Irmão/Irmã</option>
+						<option value="Avo">Avô/Avó</option>
+						<option value="Tio">Tio(a)</option>
+						<option value="Outros">Outros</option>
 					</select>
-				</div><!--thirdline-->
-				<div class="titulo1">
+					<input type="text" id="opcao" placeholder="Outros" disabled>
+				</div><!--containerDados-->
+				<div class="titulo">
 					<label for="Endereco">Endereço</label>
-				</div><!--titulos1-->
-				<div class="firstlineEND">
+				</div><!--titulos-->
+				<div class="containerEndereco">
 					<input type="text" id="cep" value="" required placeholder="CEP">
 					<input type="text" id="logradouro" value="" placeholder="Logradouro">
 					<input type="text" id="numero" value="" required  placeholder="Número">
 					<input type="text" id="comp" value="" placeholder="Complemento">
-				</div><!--firstlineEND-->
-				<div class="secondlineEND">
 					<input type="text" id="bairro" value="" required placeholder="Bairro">
 					<input type="text" id="ref" value="" placeholder="Referência">
 					<input type="text" id="cidade" value="" required placeholder="Cidade">
@@ -206,11 +104,9 @@
 						<option>Sergipe</option>
 						<option>Tocantins</option>
 					</select><!--Estado-->
-				</div><!--secondlineEND-->
-				<div class="titulo1">
+				<div class="turma">
 					<label for="turma">Turma</label>
-				</div><!--titulos1-->
-				<div class="thirdlineEND">
+				</div><!--turma-->
 					<input type="text" id="professor" value="" placeholder="Professor" readonly>
 					<select name="turma" id="turma">
 						<option value=""disabled selected>Turma</option>
@@ -221,10 +117,8 @@
 						<option value="5">5º Ano</option>
 						<option value="6">6º Ano</option>
 					</select><!--turma-->
-				</div><!--thirdlineEND-->
-				<div class="fourtlineEND">
 					<textarea placeholder="Possui alguma observação?(opcional)"></textarea>
-				</div><!--fourtlineEND-->
+				</div><!--containerEndereco-->
 				<div class="submit">
 					<input type="submit" name="acao" value="Enviar">
 					<input type="submit" name="acao" value="Cancelar">
@@ -232,5 +126,6 @@
 			</form>
 		</div><!--Dados-->
 	</section>
+	<script src="javascript/script.js"></script>
 </body>
 </html>
