@@ -12,20 +12,30 @@
 	</header>
 	<section>
 		<div class="Dados">
-			<form action="novo-cadastro.php" method="POST">
+			<form method="POST">
 				<div class="titulo">
 						<h1>Selecione seu perfil</h1>
 				</div>
-					<select class="containerSelect">
+					<select class="containerSelect" id="select">
 						  <option value="" disabled selected>Selecione uma opção</option>
 						  <option value="aluno">Aluno</option>
 						  <option value="diretor">Diretor</option>
 						  <option value="professor">Professor</option>
 					</select>
-					<a href="login/login/login.html" class="btn-proximo"> ➡ Proximo</a>
+					<a href="login/login/login.html" id="next" class="btn-proximo"> ➡ Proximo</a>
 				</div><!--containerSelect-->
 			</form>
 		</div>
 	</section>
+	<script>
+		document.getElementById('next').addEventListener('click', function(event){
+  		const select = document.getElementById('select');
+
+ 		 if(select.value === ""){
+   			 alert("Antes de continuar, selecione um perfil");
+   		 event.preventDefault();
+ 		}	
+	}); 
+	</script>
 </body>
 </html>

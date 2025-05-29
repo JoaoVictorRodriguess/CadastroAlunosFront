@@ -40,6 +40,9 @@ form{
 	padding-left: 4%;
 	padding-right: 4%;
 }
+.containerLogin{
+	text-align: center;
+}
 
 .containerLogin input{
 	margin-left: 4%;
@@ -49,13 +52,14 @@ form{
 }
 .containerLogin a{
 	text-decoration: none;
-	display: inline-block;
-	margin-left: 11.5%;
 }
 
 .containerLogin p{
+	display: inline-block;
+	margin-right: 2%;
+	margin-left: 2%;
 	margin-top: 5%;
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 	text-align: center;
 	color: rgb(64,64,64);
 }
