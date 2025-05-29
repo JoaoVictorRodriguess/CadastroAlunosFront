@@ -16,20 +16,24 @@
 				<a href="../inicial/inicial.html">Inicial</a>
 				<a href="../cadastro/cadastro.html">Cadastro</a>
 				<a href="../consulta/consulta.html">Consulta</a>
+				<a href="../calendario/calendario.html">Calendario</a>
 				<a href="../fale-conosco/fale-conosco.html">Fale Conosco</a>
 			</div><!--menu-->
+			<div class="sair">
+    			<a href="../index.html" class="btn-sair">SAIR</a>
+			</div>
 		</div><!--cabeçalho-->
-		<div class="Banner"></div> <!--Banner-->
+		<div class="Banner"></div><!--Banner-->
 	</header><!--Header-->
 	<section>
 		<div class="Dados">
-			<div class="titulo1">
+			<div class="titulo">
 				<span>Fale Conosco</span>
-			</div>	
-			<div class="faleconosco">
-					<div class="telefones">
-						<label for="telefonesuteis">Telefones Úteis</label>
-						<p>Estamos prontos para atender você!
+			</div><!--titulo-->
+			<div class="containerFaleConosco">
+					<div class="containerTelefone">
+						<h1>Telefones Úteis</h1>
+						<span>Estamos prontos para atender você!
 							Se tiver dúvidas, sugestões ou quiser saber mais sobre nossos serviços, entre em contato conosco.
 							Nossa equipe está disponível para oferecer todo o suporte que você precisa.<br>
 							
@@ -38,20 +42,20 @@
 							
 							Você também pode nos enviar uma mensagem pelo formulário abaixo. Responderemos o mais rápido possível!<br>
 							
-							Estamos aguardando seu contato!</p>
+							Estamos aguardando seu contato!</span>
 						
-						<label for="local">Localização</label>
-						<p> Rua: Duque de Caxias, Nº 20 - Centro - Iracemápolis - SP<br>
+						<h2>Localização</h2>
+						<span> Rua: Duque de Caxias, Nº 20 - Centro - Iracemápolis - SP<br>
 							CEP: 13495-000
-						</p>
-						<label for="socialmedia">Siga-nos</label>
+						</span>
+						<h3>Siga-nos</h3>
 						<img src="imagens/facebook.png">
 						<img src="imagens/instagram.png">
 						<img src="imagens/twitter.png">
-					</div><!--telefones-->
+					</div><!--containerTelefone-->
 				<form>
-					<label for="titulo">Se preferir nos mande um email</label>
-					<div class="filtros">
+					<div class="containerFormulario">
+						<h1>Se preferir nos mande um email</h1>
 						<input type="text" id="name" value="" required placeholder="Nome">
 						<input type="text" id="email" value="" required placeholder="Email">
 						<input type="text" id="telefone" value="" required placeholder="Telefone">
@@ -66,12 +70,12 @@
 							</select>
 						</div><!--selects-->
 						<textarea placeholder="Escreva sua mensagem"></textarea>
-					</div><!--filtros-->
-					<div class="submit">
-						<input type="submit" name="acao" value="Enviar">
-					</div><!--submit-->
+						<div class="submit">
+							<button type="submit" class="btn-proximo"name="acao" value="Enviar">Enviar</button>
+						</div><!--submit-->
+					</div><!--containerFormulario-->
 				</form><!--form-->
-			</div><!--faleconosco-->
+			</div><!--containerFaleconosco-->
 		</div><!--dados-->
 	</section>
 </body>

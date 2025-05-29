@@ -10,24 +10,21 @@
 	<header>	
 		<div class="Banner"></div>
 	</header>
-
 	<section>
 		<div class="Dados">
 			<form action="novo-cadastro.php" method="POST">
-				<div class="titulo1">
-					<label for="dados">Crie sua conta</label>
-				</div>
-
-				<div class="firstline">
+				<div class="titulo">
+					<h1>Crie sua conta</h1>
+				</div><!--titulo-->
+				<div class="containerLogin">
 					<input type="text" name="nome" required placeholder="Nome completo*">
 					<input type="email" name="email" required placeholder="Digite o email*">
 					<input type="password" name="senha" required placeholder="Digite a senha*">
 					<input type="password" name="confirma_senha" required placeholder="Confirme a senha*">
-				</div>
-
-				<div class="submit">
-					<button type="submit" name="criar_conta">Criar conta</button>
-				</div>
+					<div class="submit">
+							<button type="submit" class="btn-proximo">Criar Conta</button>
+					</div><!--submit-->
+				</div><!--containerLogin-->
 			</form>
 		</div>
 	</section>

@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "OpenSans";
+}
+
+html,body{
+	height: 100%;
+}
+@font-face{
+	src: url('../fonts/OpenSans-VariableFont_wdth,wght.ttf');
+	font-family: "OpenSans";
+}
+.Banner{
+	background-color: rgb(3,168,243);
+	height: 50vh;
+	z-index: 1;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.titulo h1{
+	margin-top: 5%;
+	margin-bottom: 3%;
+  	align-items: center;
+  	text-align: center;
+	font-size: 1.6rem;
+	color: rgb(64,64,64);
+}
+.Dados{
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	left: 50%;
+	top: 20vh;
+	transform: translateX(-50%);
+	z-index: 2;
+	width: 30%;
+	height: 60%;
+	border-radius: 5px;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+form{
+	padding-left: 4%;
+	padding-right: 4%;
+}
+.containerSelect {
+  appearance: none;         /* Remove o estilo padrão */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-top: 10%;
+  background-color: #fff;
+  border: 2px solid #1573c6;
+  border-radius: 6px;
+  padding: 10px 40px 10px 15px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  width: 100%;       
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M6%207L0%200h12L6%207z%22%20fill%3D%22%231573c6%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 7px;
+  transition: border-color 0.3s ease;
+}
+
+.containerSelect:hover, 
+.containerSelect:focus {
+  border-color: #0b4e8a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(21, 115, 198, 0.6);
+}
+
+.btn-proximo {
+	position: absolute;
+	top: 45%;
+  right: 5%;
+	margin-top: 5%;
+  background-color: rgb(3,168,243);
+	color: #fff;
+	border: 2px solid #1E90FF;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-proximo:hover {
+  background-color: rgb(240,240,240);
+	color: rgb(21,101,191);
+}
+
