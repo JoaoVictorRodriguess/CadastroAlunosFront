@@ -1,7 +1,7 @@
 <?php
 require_once '../../banco/connect.php';
 
-if (isset($_POST['criar_conta'])) {
+if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])&& isset($_POST['confirma_senha'])){
     $nome = trim($_POST['nome']);
     $email = trim($_POST['email']);
     $senha = $_POST['senha'];

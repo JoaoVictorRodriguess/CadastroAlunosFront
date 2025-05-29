@@ -1,7 +1,7 @@
 <?php
 require_once '../../banco/connect.php'; 
 
-if (isset($_POST['atualizar'])) {
+if (isset($_POST['email'])&& isset($_POST['nova_senha']) && isset($_POST['confirma_senha'])) {
     $email = trim($_POST['email']);
     $nova_senha = $_POST['nova_senha'];
     $confirma_senha = $_POST['confirma_senha'];

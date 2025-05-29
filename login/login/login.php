@@ -2,7 +2,7 @@
 session_start();
 require_once '../../banco/connect.php'; 
 
-if (isset($_POST['login'])) {
+if (isset($_POST['email']) && isset($_POST['senha'])) {
     $email = trim($_POST['email']);
     $senha = $_POST['senha'];
 
