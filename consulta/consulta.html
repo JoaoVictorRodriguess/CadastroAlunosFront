@@ -58,7 +58,48 @@
 					</div><!--submit-->
 				</div><!--containerFiltros-->
 			</form><!--form-->
+			<div class="containerTable">
+				<table id="listar-registros">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>CPF</th>
+							<th>Classe</th>
+							<th>Endereço</th>
+							<th>Excluir</th>
+							<th>Editar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>João Victor</td>
+							<td>123.456.789-10</td>
+							<td>5º Ano</td>
+							<td>Rua teste</td>
+							<td><input type="submit" name="delete" value="Excluir" class="btn-excluir" /></td>
+							<td><a href='edit.php?id=".$row['user_id']."' class="btn-editar">Editar</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!--containerTable-->
 		</div><!--Dados-->
 	</section>
+	<script>
+		fetch('listar_registros.php') //o back retorna os registros
+		.then(response => response.json())
+		.then(data => {
+			const tabela = document.querySelector('#tabela-registros tbody');
+			data.forEach(item => {
+			const tr = document.createElement('tr');
+			tr.innerHTML = `
+				<td>${item.id}</td>
+				<td>${item.nome}</td>
+				<td>${item.email}</td>
+			`;
+			tabela.appendChild(tr);
+			});
+		});
+</script>
 </body>
 </html>
+

@@ -152,3 +152,64 @@ form .titulo{
 	background-color: rgb(3,168,243);
 	color: #fff;
 }
+.containerTable{
+	padding: 5%;
+}
+
+.containerTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.containerTable th, .containerTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.containerTable th {
+    background-color: rgb(21,101,191);
+    color: white;
+    font-weight: bold;
+}
+.btn-excluir {
+	width: 40%;
+	height: 10%;
+	background-color: rgb(255, 71, 65);
+	color: white;
+	padding: 5px 5px;
+	border: 1px solid rgb(255, 35, 28);;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 0.8rem;
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+
+.btn-excluir:hover {
+	background-color:  rgb(255, 8, 0);
+	color: #fff;
+}
+
+.btn-editar {
+	width: 50%;
+	height: 5%;
+	background-color: #48a4ff;
+	color: white;
+	padding: 5px 10px;
+	border: 1px solid #0080ff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 0.8rem;
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+
+.btn-editar:hover {
+	background-color:  rgb(21,101,191);
+	color: #fff;
+}
