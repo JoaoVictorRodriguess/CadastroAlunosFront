@@ -1,0 +1,93 @@
+<?php
+session_start();
+require_once '../banco/connect.php';
+
+$role = $_SESSION['usuario_role'] ?? null; // evita erro caso não esteja logado
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/informacoes.css">
+	<title>Informações</title>
+</head>
+<body>
+	<header>
+		<div class="cabecalho">
+			<div class="logo">
+				<img src="imagens/logo.png">
+			</div><!--logo-->
+			<div class="menu">
+					<a href="../inicial/inicial.php">Inicial</a>
+
+					<?php if ($role != 0): // não-aluno ?>
+							<a href="../cadastro/cadastro.php">Cadastro</a>
+							<a href="../consulta/consulta.php">Consulta</a>
+					<?php endif; ?>
+
+					<a href="../calendario/calendario.php">Calendário</a>
+					<a href="../fale-conosco/fale-conosco.php">Fale Conosco</a>
+			</div>
+			<div class="sair">
+    			<a href="../index.html" class="btn-sair">SAIR</a>
+			</div>
+		</div><!--cabeçalho-->
+		<div class="Banner"></div><!--Banner-->
+	</header><!--Header-->
+	<section>
+		<div class="Dados">
+			<div class="titulo">
+				<span>Fale Conosco</span>
+			</div><!--titulo-->
+			<div class="containerFaleConosco">
+					<div class="containerTelefone">
+						<h1>Telefones Úteis</h1>
+						<span>Estamos prontos para atender você!
+							Se tiver dúvidas, sugestões ou quiser saber mais sobre nossos serviços, entre em contato conosco.
+							Nossa equipe está disponível para oferecer todo o suporte que você precisa.<br>
+							
+							📞 Telefones para contato:<br>
+							(XX) XXXX-XXXX | (XX) XXXXX-XXXX<br>
+							
+							Você também pode nos enviar uma mensagem pelo formulário abaixo. Responderemos o mais rápido possível!<br>
+							
+							Estamos aguardando seu contato!</span>
+						
+						<h2>Localização</h2>
+						<span> Rua: Duque de Caxias, Nº 20 - Centro - Iracemápolis - SP<br>
+							CEP: 13495-000
+						</span>
+						<h3>Siga-nos</h3>
+						<img src="imagens/facebook.png">
+						<img src="imagens/instagram.png">
+						<img src="imagens/twitter.png">
+					</div><!--containerTelefone-->
+				<form>
+					<div class="containerFormulario">
+						<h1>Se preferir nos mande um email</h1>
+						<input type="text" id="name" value="" required placeholder="Nome">
+						<input type="text" id="email" value="" required placeholder="Email">
+						<input type="text" id="telefone" value="" required placeholder="Telefone">
+						<div class="selects">
+							<select name="tipo" id="tipo">
+								<option disabled selected>Escolha o Assunto</option>
+								<option>Alunos</option>
+								<option>Professores</option>
+								<option>Opcao1</option>
+								<option>Opcao2</option>
+								<option>Opcao3</option>
+							</select>
+						</div><!--selects-->
+						<textarea placeholder="Escreva sua mensagem"></textarea>
+						<div class="submit">
+							<button type="submit" class="btn-proximo"name="acao" value="Enviar">Enviar</button>
+						</div><!--submit-->
+					</div><!--containerFormulario-->
+				</form><!--form-->
+			</div><!--containerFaleconosco-->
+		</div><!--dados-->
+	</section>
+</body>
+</html>
