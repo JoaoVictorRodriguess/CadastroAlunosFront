@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="login/tipo-usuario/css/tipo-usuario.css">
-	<title>Cadastro de Alunos</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="login/tipo-usuario/css/tipo-usuario.css" />
+	<title>Selecione seu perfil</title>
 </head>
 <body>
-	<header>	
+	<header>
 		<div class="Banner"></div>
 	</header>
 	<section>
 		<div class="Dados">
 			<form method="POST">
 				<div class="titulo">
-						<h1>Selecione seu perfil</h1>
+					<h1>Selecione seu perfil</h1>
 				</div>
-					<select class="containerSelect" id="select">
-						  <option value="" disabled selected>Selecione uma opção</option>
-						  <option value="aluno">Aluno</option>
-						  <option value="diretor">Diretor</option>
-						  <option value="professor">Professor</option>
-					</select>
-					<a href="login/login/login.html" id="next" class="btn-proximo"> ➡ Proximo</a>
-				</div><!--containerSelect-->
+				<select class="containerSelect" id="select">
+					<option value="" disabled selected>Selecione uma opção</option>
+					<option value="0">Aluno</option>
+					<option value="2">Diretor</option>
+					<option value="1">Professor</option>
+				</select>
+				<a href="login/login/login.html" id="next" class="btn-proximo">➡ Próximo</a>
 			</form>
 		</div>
 	</section>
-	<script>
-		document.getElementById('next').addEventListener('click', function(event){
-  		const select = document.getElementById('select');
 
- 		 if(select.value === ""){
-   			 alert("Antes de continuar, selecione um perfil");
-   		 event.preventDefault();
- 		}	
-	}); 
+	<script>
+		document.getElementById('next').addEventListener('click', function (event) {
+			const select = document.getElementById('select');
+			const role = select.value;
+
+			if (!role) {
+				alert('Antes de continuar, selecione um perfil');
+				event.preventDefault();
+			} else {
+				sessionStorage.setItem('user_role', role); // salva a role no sessionStorage
+			}
+		});
 	</script>
 </body>
 </html>

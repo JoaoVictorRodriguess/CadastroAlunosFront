@@ -214,3 +214,10 @@ form .titulo{
 	background-color:  rgb(21,101,191);
 	color: #fff;
 }
+
+table th:nth-child(1) { width: 10px; } /* Nome */
+table th:nth-child(2) { width: 300px; } /* CPF */
+table th:nth-child(3) { width: 10px; } /* Classe */
+table th:nth-child(4) { width: 20px; } /* Endereço */
+table th:nth-child(5),
+table th:nth-child(6) { width: 80px; text-align: center; } /* Excluir e Editar */

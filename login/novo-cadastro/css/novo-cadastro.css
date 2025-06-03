@@ -41,12 +41,30 @@ form{
 	padding-right: 4%;
 }
 
-.containerLogin input{
+.containerLogin input,
+.containerLogin select {
 	margin-left: 4%;
 	margin-bottom: 5%;
 	height: 35px;
 	width: 90%;
+	padding: 0 10px;
+	font-family: inherit;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	appearance: none; /* remove estilo padrão para mais controle */
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+	background-size: 10px 7px;
 }
+
+select{
+	color: #777;
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg%20width%3d%2210%22%20height%3d%227%22%20viewBox%3d%220%200%2010%207%22%20xmlns%3d%22http%3a//www.w3.org/2000/svg%22%3e%3cpath%20d%3d%22M0%200l5%207%205-7z%22%20fill%3d%22%23666%22/%3e%3c/svg%3e");
+}
+
 .containerLogin p{
 	margin-top: 5%;
 	margin-bottom: 10%;

@@ -7,7 +7,7 @@
 	<title>Cadastro de Alunos</title>
 </head>
 <body>
-	<header>	
+	<header>
 		<div class="Banner"></div>
 	</header>
 	<section>
@@ -15,16 +15,22 @@
 			<form action="novo-cadastro.php" method="POST">
 				<div class="titulo">
 					<h1>Crie sua conta</h1>
-				</div><!--titulo-->
+				</div>
 				<div class="containerLogin">
-					<input type="text" name="nome" required placeholder="Nome completo*">
-					<input type="email" name="email" required placeholder="Digite o email*">
-					<input type="password" name="senha" required placeholder="Digite a senha*">
-					<input type="password" name="confirma_senha" required placeholder="Confirme a senha*">
+					<input type="text" name="nome" required placeholder="Nome completo*" />
+					<input type="email" name="email" required placeholder="Digite o email*" />
+					<input type="password" name="senha" required placeholder="Digite a senha*" />
+					<input type="password" name="confirma_senha" required placeholder="Confirme a senha*" />
+					<select name="role" id="input-select" required>
+						<option value="" disabled selected>Selecione o perfil*</option>
+						<option value="0">Aluno</option>
+						<option value="1">Professor</option>
+						<option value="2">Diretor</option>
+					</select>
 					<div class="submit">
-							<button type="submit" class="btn-proximo">Criar Conta</button>
-					</div><!--submit-->
-				</div><!--containerLogin-->
+						<button type="submit" class="btn-proximo">Criar Conta</button>
+					</div>
+				</div>
 			</form>
 		</div>
 	</section>

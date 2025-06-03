@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-	<title>Cadastro de Alunos</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<title>Login</title>
 </head>
 <body>
-	<header>	
+	<header>
 		<div class="Banner"></div> <!--Banner-->
-	</header><!--Header-->
+	</header>
 	<section>
 		<div class="Dados">
 			<form action="login.php" method="POST">
 				<div class="titulo">
 					<h1>Login</h1>
-				</div><!--titulo-->
+				</div>
 				<div class="containerLogin">
-					<input type="email" name="email" value="" required placeholder="E-mail">
-					<input type="password" name="senha" value="" required placeholder="Senha">
+					<input type="email" name="email" required placeholder="E-mail" />
+					<input type="password" name="senha" required placeholder="Senha" />
 					<a href="../esqueci-senha/esqueci-senha.html">
 						<p>Esqueci a senha</p>
 					</a>
@@ -27,10 +27,26 @@
 					</a>
 					<div class="submit">
 						<button type="submit" class="btn-proximo">Entrar</button>
-					</div><!--submit-->
-				</div><!--containerLogin-->
+					</div>
+				</div>
 			</form>
-		</div><!--Dados-->
+		</div>
 	</section>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const role = sessionStorage.getItem('user_role');
+			if (role) {
+				const inputRole = document.createElement('input');
+				inputRole.type = 'hidden';
+				inputRole.name = 'role';
+				inputRole.value = role;
+				document.querySelector('form').appendChild(inputRole);
+			} else {
+				alert('Perfil não selecionado. Você será redirecionado.');
+				window.location.href = '../../index.html';
+			}
+		});
+	</script>
 </body>
 </html>

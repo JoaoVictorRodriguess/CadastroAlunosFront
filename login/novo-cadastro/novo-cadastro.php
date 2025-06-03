@@ -1,13 +1,14 @@
 <?php
 require_once '../../banco/connect.php';
 
-if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])&& isset($_POST['confirma_senha'])){
+if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])&& isset($_POST['confirma_senha'])&& isset($_POST['role'])){
     $nome = trim($_POST['nome']);
     $email = trim($_POST['email']);
     $senha = $_POST['senha'];
     $confirma_senha = $_POST['confirma_senha'];
+    $role = intval($_POST['role']);
 
-    if (empty($nome) || empty($email) || empty($senha) || empty($confirma_senha)) {
+    if (empty($nome) || empty($email) || empty($senha) || empty($confirma_senha)&& isset($_POST['role'])) {
         echo "<script>
                 alert('Preencha todos os campos obrigatórios.');
                 window.history.back();
@@ -34,7 +35,6 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])&& 
             $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
             $status = 1;
             $rst_password = 0;
-            $role = 1;
 
             $sql = "INSERT INTO users (name, email, password, status, rst_password, role) 
                     VALUES (?, ?, ?, ?, ?, ?)";
